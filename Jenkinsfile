@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "m -rf build && conan install -if build . && conan build -bf build ."
+                sh "rm -rf build && conan install -if build . && conan build -bf build ."
             }
         }
     }
